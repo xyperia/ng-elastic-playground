@@ -1,4 +1,4 @@
-# Angular Chat-Like App
+# Angular ng-elastic-playground
 
 This is an Angular frontend application designed to simulate a real-time chat interface. It communicates with a backend API that provides token-by-token responses, making it feel like a conversational flow, similar to apps like Telegram.
 
@@ -17,5 +17,5 @@ To run this project, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/angular-chat-app.git
-cd angular-chat-app
+git clone https://github.com/xyperia/ng-elastic-playground.git
+cd ng-elastic-playground
