@@ -1,0 +1,21 @@
+<div class="chat-container">
+  <div class="messages">
+    <div *ngFor="let message of userMessages; let i = index" class="message-row">
+      <!-- User Message -->
+      <div class="user-message">
+        {{ message }}
+      </div>
+      <!-- Bot Response -->
+      <div class="bot-message" *ngIf="botMessages[i]">
+        {{ botMessages[i] }}
+        <span class="typing-indicator" *ngIf="loading && i === userMessages.length - 1">...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Message Input Box -->
+  <div class="input-container">
+    <input [(ngModel)]="messageInput" (keydown.enter)="sendMessage()" placeholder="Type a message..." class="message-input" />
+    <button (click)="sendMessage()" class="send-button">Send</button>
+  </div>
+</div>

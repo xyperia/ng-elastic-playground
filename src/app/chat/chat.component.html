@@ -1,0 +1,27 @@
+<div class="chat-container">
+    <!-- User's chat displayed on the right -->
+    <div class="user-chat">
+      <div class="message right">
+        {{ userMessage }}
+      </div>
+    </div>
+  
+    <!-- Bot's response displayed on the left, token by token -->
+    <div class="bot-chat">
+      <div class="message left">
+        {{ botMessage }}
+      </div>
+    </div>
+  
+    <!-- Input field and send button -->
+    <!-- <div class="input-container">
+      <input [(ngModel)]="messageInput" type="text" placeholder="Type your question here..." />
+      <button (click)="sendMessage(messageInput)" [disabled]="loading || !messageInput">Send</button>
+    </div> -->
+  
+    <!-- Show a loading indicator while waiting for a response -->
+    <div *ngIf="loading" class="loading">
+      Generating response...
+    </div>
+  </div>
+  
